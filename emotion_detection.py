@@ -12,8 +12,8 @@ def emotion_detector(text_to_analyze):
 
     # Process the response
     if response.status_code == 200:
-        result = response.json().get('text', 'No text found in response')  # Safely get the text attribute
-        return result
+        result = response.json().get('text', 'No text found in response')
+        
     else:
         return "Error: Unable to process the emotion detection. Status Code: {}".format(response.status_code)
 
